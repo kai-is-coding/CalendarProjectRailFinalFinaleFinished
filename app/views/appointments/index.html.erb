@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <% @appointment.each do |x| %>
+    <%= x.title %><br>
+    <%= x.description %><br>
+    <%= x.date %><br>
+    <%= x.time.to_s.slice(11..18) %>
+    <%= link_to "Edit", edit_appointment_path(x.id) %>
+    <%= link_to "Delete", appointment_path(x.id), method:"delete" %><br><br>
+  <% end %>
+  <%= link_to "Create new appointment", new_appointment_path %>
+</body>
+</html>

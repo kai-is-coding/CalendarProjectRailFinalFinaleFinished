@@ -1,0 +1,22 @@
+<%= form_for @note do |form| %>
+  <div class="field">
+    <%= form.label :message %>
+    <%= form.text_area :message %>
+  </div>
+
+  <div class="field">
+    <%= form.label :appointment %>
+    <select name="note[appointment_id]">
+      <% Appointment.all.each do |appointment| %>
+        <option value="<%= appointment.id %>"><%= appointment.title %></option>
+      <% end %>
+
+    </select>
+  </div>
+
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

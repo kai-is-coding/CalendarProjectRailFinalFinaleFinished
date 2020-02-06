@@ -1,0 +1,16 @@
+<h1>Notes#show</h1>
+<p>
+  <strong>Messages:</strong>
+  <%= @note.message %>
+</p>
+
+<p>
+  <strong>Appointment:</strong>
+  <%= @note.appointment.title %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_note_path(@note.id) %> |
+<%= link_to 'Delete', note_path(@note.id), method: :delete %> |
+<%= link_to 'Back', notes_path %>

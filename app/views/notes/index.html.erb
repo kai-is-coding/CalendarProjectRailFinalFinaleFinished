@@ -1,0 +1,6 @@
+<h1>Notes#index</h1>
+<% @notes.each do |note| %>
+  <%= link_to note.message, note_path(note.id)  %><br>
+<% end %><br>
+
+<%= link_to 'New Note', new_note_path %>

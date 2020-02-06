@@ -1,0 +1,63 @@
+<div class="main_content">
+  <div id="login">
+
+
+<h2>Create a New Account</h2>
+<br>
+<!-- could also just use @user.errors.full_messages here -->
+<% if @user.errors.any? %>
+    <p>Please correct the following errors:</p>
+     <ul>
+        <% @user.errors.full_messages.each do |e| %>
+          <li><%= e %></li>
+        <% end %>
+    </ul>
+<% end %>
+
+  <%= form_for @user do |f| %>
+  <div class="field">
+    <div>
+    <%= f.label :name %>
+    </div>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <div>
+    <%= f.label :email %>
+    </div>
+    <%= f.email_field :email %>
+
+  </div>
+
+  <div class="field">
+    <div>
+    <%= f.label :password %>
+      </div>
+    <%= f.password_field :password %>
+
+  </div>
+  <div class="field">
+    <div>
+    <%= f.label :password_confirmation %>
+    </div>
+    <%= f.password_field :password_confirmation %>
+
+  </div>
+  <div class="submit">
+  <%= f.submit 'Sign up' %>
+  </div>
+
+
+</div>
+
+</div>
+
+
+<br>
+
+
+
+
+
+<% end %>
