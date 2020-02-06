@@ -1,27 +1,25 @@
-# README
+# Calendar
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This web site helps people to manage their time and day by assigning their daily appointments according to Calendar.
 
-Things you may want to cover:
+## About
+Back-end website built on Rails
 
-* Ruby version
+## Installation
+run these commands
+```bash
+bundle install
+```
 
-* System dependencies
 
-* Configuration
+## Technologies
 
-* Database creation
+```bash
+Ruby on Rails
+```
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# CalendarProjectRails
-# CalendarProjectFinalRails
-# CalendarProjectRailFinalFinaleFinished
+## Created By
+Ivan,
+Hasan,
+Kai
